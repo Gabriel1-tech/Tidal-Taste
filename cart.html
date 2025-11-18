@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart | Tidal Taste</title>
+  <link rel="stylesheet" href="finals.css">
+</head>
+
+<body>
+
+  
+  <nav class="navbar">
+        <div class="logo">Tidal Taste Café</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a class="active" href="contact.html">Contact</a></li>
+            <a href="cart.html" id="cart-btn">Cart (<span id="cart-count">0</span>)</a>
+        </ul>
+    </nav>
+
+  <!-- Cart Page Content -->
+  <section class="about">
+    <div class="container">
+      <h2>Your Cart</h2>
+      <p>Review your items before checkout.</p>
+
+      <div id="cart-container">
+        <ul id="cart-items" style="list-style: none; padding: 0;"></ul>
+
+        <h3 style="margin-top: 1.5rem;">
+          Total: ₱<span id="cart-total">0</span>
+        </h3>
+
+        <button id="clear-cart"
+          style="background:#b45309; color:white; padding:10px 20px; border:none; border-radius:8px; margin-top:1rem;">
+          Clear Cart
+        </button>
+
+        <br><br>
+
+        <a href="menu.html"
+          style="display:inline-block; text-decoration:none; color:#b45309; font-weight:bold;">
+          ← Back to Menu
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+<script>
+// Load cart from localStorage
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+// Display cart items
+function displayCart() {
+  let cartItems = document.getElementById("cart-items");
+  let totalDisplay = document.getElementById("cart-total");
+
+  cartItems.innerHTML = "";
+  let total = 0;
+
+  cart.forEach(item => {
+    let li = document.createElement("li");
+    li.style.padding = "8px 0";
+    li.style.borderBottom = "1px solid #ddd";
+    li.textContent = `${item.name} - ₱${item.price}`;
+    cartItems.appendChild(li);
+
+    total += item.price;
+  });
+
+  totalDisplay.textContent = total;
+}
+
+displayCart();
+
+// Clear cart
+document.getElementById("clear-cart").addEventListener("click", () => {
+  cart = [];
+  localStorage.setItem("cart", JSON.stringify(cart));
+  displayCart();
+});
+</script>
+
+</body>
+</html>

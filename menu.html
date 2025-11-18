@@ -6,18 +6,26 @@
   <title>Tidal Taste | Menu</title>
   <link rel="stylesheet" href="finals.css" />
 </head>
+<div id="cart-box" class="cart-box">
+  <h2>Your Cart</h2>
+  <ul id="cart-items"></ul>
+
+  <p class="total">Total: ₱<span id="cart-total">0</span></p>
+
+  <button id="close-cart">Close</button>
+</div>
+
 <body>
   <!-- Header -->
-  <header>
-    <div class="container nav">
-      <h1 class="logo">Tidal Taste</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="menu.html" class="active">Menu</a>
-        <a href="#">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <nav class="navbar">
+        <div class="logo">Tidal Taste Café</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a class="active" href="contact.html">Contact</a></li>
+            <a href="cart.html" id="cart-btn">Cart (<span id="cart-count">0</span>)</a>
+        </ul>
+    </nav>
 
   <!-- Menu Section -->
   <section class="menu">
@@ -30,6 +38,13 @@
           <h3>Classic Lemonade</h3>
           <p>Classic lemonade with ice.</p>
           <span class="price">₱95</span>
+
+          <button class="add-cart"
+        data-name="Mad Matcha"
+        data-price="95">
+  Add to Cart
+</button>
+
         </div>
 
         <div class="menu-card">
@@ -37,41 +52,83 @@
           <h3>Yakult Lemonade</h3>
           <p>Lemonade drink infused with yakult.</p>
           <span class="price">₱120</span>
+
+          <button class="add-cart"
+        data-name="Yakult Lemonade"
+        data-price="120">
+  Add to Cart
+</button>
+
         </div>
         
         <div class="menu-card">
           <img src="cucumberLemonade.jpg" alt="oreoDeli">
           <h3>Cucumber Lemonade</h3>
           <p>Freshly juiced cucumber with lemon.</p>
-          <span class="price">₱120</span>
+          <span class="price">₱100</span>
+
+          <button class="add-cart"
+        data-name="Cucumber Lemonade"
+        data-price="100">
+  Add to Cart
+</button>
+
         </div>
 
         <div class="menu-card">
           <img src="strawberryLemonade.jpg" alt="oreoDeli">
           <h3>Strawberry Lemonade</h3>
           <p>Imported baguio strawberries with a squeeze of lemon.</p>
-          <span class="price">₱120</span>
+          <span class="price">₱105</span>
+
+          <button class="add-cart"
+        data-name="Strawberry Lemonade"
+        data-price="105">
+  Add to Cart
+</button>
+
         </div>
 
         <div class="menu-card">
           <img src="passionfruitLemonade.jpg" alt="oreoDeli">
           <h3>Passionfruit Lemonade</h3>
           <p>Freshly extracted passionfruit mixed with lemon juice.</p>
-          <span class="price">₱120</span>
+          <span class="price">₱90</span>
+
+          <button class="add-cart"
+        data-name="Passionfruit Lemonade"
+        data-price="90">
+  Add to Cart
+</button>
+
         </div>
 
         <div class="menu-card">
           <img src="mangoLemonade.jpg" alt="oreoDeli">
           <h3>Mango Lemonade</h3>
           <p>Newly spooned thai mango with lemon juice and ice.</p>
-          <span class="price">₱120</span>
+          <span class="price">₱80</span>
+
+          <button class="add-cart"
+        data-name="Mango Lemonade"
+        data-price="80">
+  Add to Cart
+</button>
+
         </div>
 
         <div class="menu-card">
           <img src="blueberryLemonade.jpg" alt="oreoDeli">
           <h3>Blueberry Lemonade</h3>
           <p>Alaskan blueberries with lemon juice.</p>
-          <span class="price">₱120</span>
+          <span class="price">₱90</span>
+
+          <button class="add-cart"
+        data-name="Blueberry Lemonade"
+        data-price="90">
+  Add to Cart
+</button>
+
         </div>
       </div><br><br>
 
@@ -81,7 +138,14 @@
           <img src="biscoffsupreme.jpg" alt="biscoffSupreme">
           <h3>Biscoff Supreme</h3>
           <p>Soft waffle topped with whipped cream and Biscoff.</p>
-          <span class="price">₱85</span>
+          <span class="price">₱100</span>
+
+          <button class="add-cart"
+        data-name="Biscoff Supreme Waffle"
+        data-price="100">
+  Add to Cart
+</button>
+
         </div>
 
         <div class="menu-card">
@@ -89,27 +153,54 @@
           <h3>Nutella Banana</h3>
           <p>Fluffy waffle topped with banana and Nutella drizzle.</p>
           <span class="price">₱85</span>
+
+          <button class="add-cart"
+        data-name="Nutella Banana Waffle"
+        data-price="85">
+  Add to Cart
+</button>
+
         </div>
 
         <div class="menu-card">
-          <img src="nutellaBanana.jpg" alt="nutellaBanana">
-          <h3>Nutella Banana</h3>
-          <p>Fluffy waffle topped with banana and Nutella drizzle.</p>
-          <span class="price">₱85</span>
+          <img src="strawberryWaffle.jpg" alt="strawberryBanana">
+          <h3>Strawberry Waffle</h3>
+          <p>Toasted Waffles with strawberry syrup.</p>
+          <span class="price">₱90</span>
+
+          <button class="add-cart"
+        data-name="Strawberry Waffle"
+        data-price="90">
+  Add to Cart
+</button>
+
         </div>
 
         <div class="menu-card">
-          <img src="nutellaBanana.jpg" alt="nutellaBanana">
-          <h3>Nutella Banana</h3>
-          <p>Fluffy waffle topped with banana and Nutella drizzle.</p>
-          <span class="price">₱85</span>
+          <img src="waffleSandwich.jpg" alt="waffleSandwich">
+          <h3>Waffle Sandwich</h3>
+          <p>Italian ham and romanian lettuce with waffle.</p>
+          <span class="price">₱110</span>
+
+          <button class="add-cart"
+        data-name="Waffle Sandwich"
+        data-price="110">
+  Add to Cart
+</button>
+
         </div>
 
         <div class="menu-card">
-          <img src="nutellaBanana.jpg" alt="nutellaBanana">
-          <h3>Nutella Banana</h3>
-          <p>Fluffy waffle topped with banana and Nutella drizzle.</p>
+          <img src="caramelWaffle.jpg" alt="nutellaBanana">
+          <h3>Caramel Waffle</h3>
+          <p>Golden crispy waffles with premium caramel.</p>
           <span class="price">₱85</span>
+
+          <button class="add-cart"
+        data-name="Caramel Waffle"
+        data-price="85">
+  Add to Cart
+</button>
         </div>
       </div>
     </div>
@@ -122,5 +213,53 @@
       <p>© 2025 Tidal Taste. All rights reserved.</p>
     </div>
   </footer>
+  <script>
+// Basic cart storage
+let cart = [];
+
+// Add to cart buttons
+document.querySelectorAll(".add-cart").forEach(btn => {
+  btn.addEventListener("click", () => {
+    let name = btn.dataset.name;
+    let price = Number(btn.dataset.price);
+
+    cart.push({ name, price });
+localStorage.setItem("cart", JSON.stringify(cart));
+
+
+    updateCartDisplay();
+  });
+});
+
+// Update cart count + items
+function updateCartDisplay() {
+  document.getElementById("cart-count").textContent = cart.length;
+
+  let cartItems = document.getElementById("cart-items");
+  cartItems.innerHTML = "";
+
+  let total = 0;
+
+  cart.forEach(item => {
+    total += item.price;
+
+    let li = document.createElement("li");
+    li.textContent = `${item.name} - ₱${item.price}`;
+    cartItems.appendChild(li);
+  });
+
+  document.getElementById("cart-total").textContent = total;
+}
+
+// Open cart
+document.getElementById("cart-btn").addEventListener("click", () => {
+  document.getElementById("cart-box").classList.add("show");
+});
+
+// Close cart
+document.getElementById("close-cart").addEventListener("click", () => {
+  document.getElementById("cart-box").classList.remove("show");
+});
+</script>
 </body>
 </html>
