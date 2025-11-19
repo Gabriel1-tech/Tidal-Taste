@@ -1,4 +1,4 @@
-/* Reset & Base */
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,6 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
 header {
   background: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -50,8 +49,7 @@ nav a:hover, nav a.active {
   color: #b45309;
 }
 
-/* Hero Section */
-/* Hero Section */
+
 .hero {
   background: url('homebg.jpg') center/cover no-repeat;
   height: 80vh;
@@ -61,14 +59,14 @@ nav a:hover, nav a.active {
   align-items: center;
   text-align: center;
   color: white;
-  padding-top: 30rem; /* moves the text down to avoid overlapping logo */
+  padding-top: 30rem; 
 }
 
 .hero-content {
   background: rgba(0, 0, 0, 0.5);
   padding: 2rem;
   border-radius: 10px;
-  margin-top: 3rem; /* extra buffer below the logo */
+  margin-top: 3rem; 
 }
 
 
@@ -91,7 +89,7 @@ nav a:hover, nav a.active {
   background: #92400e;
 }
 
-/* About */
+
 .about {
   padding: 3rem 0;
   text-align: center;
@@ -102,7 +100,7 @@ nav a:hover, nav a.active {
   margin-bottom: 1rem;
 }
 
-/* Menu & Menu Preview */
+
 .menu, .menu-preview {
   padding: 3rem 0;
   text-align: center;
@@ -149,7 +147,6 @@ nav a:hover, nav a.active {
   margin-top: 0.5rem;
 }
 
-/* Footer */
 footer {
   background: #b45309;
   color: #fffaf3;
@@ -157,7 +154,7 @@ footer {
   padding: 1rem 0;
   font-size: 0.9rem;
 }
-/* CART SIDEBAR */
+
 .cart-box {
   position: fixed;
   right: -350px;
@@ -211,17 +208,16 @@ footer {
     font-family: Arial, sans-serif;
 }
 
-/* Background */
 body {
     background: #ffffff;
     min-height: 100vh;
     color: #333;
 }
 
-/* NAVIGATION BAR */
+
 .navbar {
     width: 100%;
-    background: #b45309;  /* main orange */
+    background: #b45309;  
     padding: 15px 40px;
     display: flex;
     justify-content: space-between;
@@ -249,15 +245,14 @@ body {
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: #ffe8d3; /* soft light-orange highlight */
+    color: #ffe8d3; 
 }
 
-/* CONTACT PAGE */
 .contact-container {
     width: 90%;
     max-width: 700px;
     margin: 100px auto;
-    background: #fff7ef; /* very soft orange tint */
+    background: #fff7ef; 
     padding: 40px;
     border-radius: 12px;
     border: 2px solid #b45309;
@@ -267,7 +262,7 @@ body {
     text-align: center;
     margin-bottom: 25px;
     font-size: 36px;
-    color: #b45309; /* main orange */
+    color: #b45309; 
 }
 
 .contact-info {

@@ -16,7 +16,7 @@
 </div>
 
 <body>
-  <!-- Header -->
+  
   <nav class="navbar">
         <div class="logo">Tidal Taste Café</div>
         <ul class="nav-links">
@@ -27,7 +27,7 @@
         </ul>
     </nav>
 
-  <!-- Menu Section -->
+  
   <section class="menu">
     <div class="container">
       <h2>Lemonades</h2>
@@ -206,7 +206,7 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  
   <footer>
     <div class="container">
       <p>📍 187 Horacio Dela Costa St, Mauban, Quezon • ☕ Open 3PM - 9PM</p>
@@ -214,10 +214,10 @@
     </div>
   </footer>
   <script>
-// Basic cart storage
+
 let cart = [];
 
-// Add to cart buttons
+
 document.querySelectorAll(".add-cart").forEach(btn => {
   btn.addEventListener("click", () => {
     let name = btn.dataset.name;
@@ -231,7 +231,7 @@ localStorage.setItem("cart", JSON.stringify(cart));
   });
 });
 
-// Update cart count + items
+
 function updateCartDisplay() {
   document.getElementById("cart-count").textContent = cart.length;
 
@@ -251,12 +251,12 @@ function updateCartDisplay() {
   document.getElementById("cart-total").textContent = total;
 }
 
-// Open cart
+
 document.getElementById("cart-btn").addEventListener("click", () => {
   document.getElementById("cart-box").classList.add("show");
 });
 
-// Close cart
+
 document.getElementById("close-cart").addEventListener("click", () => {
   document.getElementById("cart-box").classList.remove("show");
 });

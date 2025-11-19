@@ -20,7 +20,6 @@
         </ul>
     </nav>
 
-  <!-- Cart Page Content -->
   <section class="about">
     <div class="container">
       <h2>Your Cart</h2>
@@ -50,10 +49,9 @@
   </section>
 
 <script>
-// Load cart from localStorage
+
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-// Display cart items
 function displayCart() {
   let cartItems = document.getElementById("cart-items");
   let totalDisplay = document.getElementById("cart-total");
@@ -76,7 +74,6 @@ function displayCart() {
 
 displayCart();
 
-// Clear cart
 document.getElementById("clear-cart").addEventListener("click", () => {
   cart = [];
   localStorage.setItem("cart", JSON.stringify(cart));
